@@ -2,7 +2,7 @@
 require 'vendor/autoload.php';
 $router = new AltoRouter();
 
-$router->map( 'GET', '/articles/[*:article]', function($article) {
+$router->map( 'GET', '/articles?/?[*:article]', function($article) {
   require __DIR__ . '/article.php';
 });
 
