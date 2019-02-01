@@ -1,0 +1,12 @@
+{
+    "name": "wans/altorouter",
+    "require": {
+        "altorouter/altorouter": "^1.2"
+    },
+    "authors": [
+        {
+            "name": "wans",
+            "email": "alexwans@gmail.com"
+        }
+    ]
+}
