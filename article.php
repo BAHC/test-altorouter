@@ -11,6 +11,6 @@ switch($post)
     break;
 
   default:
-    include __DIR__.'article_list.php';
+    include __DIR__.'/article_list.php';
     break;
 }
