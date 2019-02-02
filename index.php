@@ -1,13 +1,20 @@
 <?php
-require 'vendor/autoload.php';
+//require 'vendor/autoload.php';
+require __DIR__.'/vendor/altorouter/altorouter/AltoRouter.php';
 $router = new AltoRouter();
 
+define('GEEK_ROOT', __DIR__);
+
 $router->map( 'GET', '/articles?/?[*:article]', function($article) {
-  require __DIR__ . '/article.php';
+  require GEEK_ROOT . '/views/article.php';
 });
 
 $router->map( 'GET', '/users/[i:id]/?', function($id) {
-  require __DIR__ . '/user_details.php';
+  require GEEK_ROOT . '/views/user_details.php';
+});
+
+$router->map( 'GET', '/online', function() {
+  require GEEK_ROOT . '/views/post.php';
 });
 
 $match = $router->match();
